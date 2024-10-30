@@ -7,66 +7,54 @@ import {
   IconHome,
   IconNewSection,
   IconTerminal2,
+  IconPhonePlus,
 } from "@tabler/icons-react";
 
 export function FloatingDockComponent() {
   const links = [
     {
       title: "Home",
-      icon: (
-        <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      icon: <IconHome className="h-full w-full text-neutral-300" />,
+      href: "#home",
     },
 
     {
       title: "Projects",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconTerminal2 className="h-full w-full text-neutral-300" />,
       href: "#",
     },
     {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
+      title: "Contact",
+      icon: <IconPhonePlus className="h-full w-full text-neutral-300" />,
+      href: "#contact",
     },
     {
       title: "Aceternity UI",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconNewSection className="h-full w-full text-neutral-300" />,
       href: "#",
     },
     {
       title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconExchange className="h-full w-full text-neutral-300" />,
       href: "#",
     },
 
     {
       title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconBrandX className="h-full w-full text-neutral-300" />,
       href: "#",
     },
     {
       title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
+      icon: <IconBrandGithub className="h-full w-full text-neutral-300" />,
       href: "#",
     },
   ];
   return (
-    <div className="fixed bottom-0 left-0 right-0 flex items-center justify-center h-[7rem] w-full">
+    <div className="fixed bottom-4 right-4 md:bottom-0 md:right-0 md:left-0 flex items-center  md:justify-center md:h-[7rem] w-full z-50">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
+        mobileClassName="md:translate-y-20 left-10 "
+        desktopClassName="w-auto"
         items={links}
       />
     </div>

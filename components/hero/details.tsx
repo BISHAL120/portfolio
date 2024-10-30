@@ -2,16 +2,16 @@
 
 import { motion } from "framer-motion";
 
-export default function Details() {
+export default function Details({ className }: { className?: string }) {
   const text =
     "I am a full stack developer with a passion for building scalable and efficient web applications. I am a quick learner & I'm always looking for new challenges. With a strong foundation in both frontend and backend development, I am dedicated to crafting seamless user experiences and driving innovation in the tech industry.";
 
   const words = text.split(" ");
 
   return (
-    <div>
+    <div className={className}>
       <motion.div
-        className="text-neutral-400 text-lg text-center mt-4 w-3/4 mx-auto"
+        className="text-neutral-400 text-lg text-center mt-4 md:w-3/4 mx-auto"
         initial={{ opacity: 1 }}
         animate={{ opacity: 1 }}
       >

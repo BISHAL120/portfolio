@@ -1,7 +1,11 @@
 import React from "react";
 
 const Contact = () => {
-  return <div>Contact Component</div>;
+  return (
+    <div id="contact" className="min-h-screen">
+      Contact Component
+    </div>
+  );
 };
 
 export default Contact;
