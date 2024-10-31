@@ -12,18 +12,19 @@ export default function Details({ className }: { className?: string }) {
     <div className={className}>
       <motion.div
         className="text-neutral-400 text-lg text-center mt-4 md:w-3/4 mx-auto"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
       >
         {words.map((word, index) => (
           <motion.span
             key={index}
             className="inline-block mr-1"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.3,
-              delay: 0.9 + index * 0.1, // Start after 0.9s, then 0.1s delay per word
+              delay: 0.9 + index * 0.1,
               ease: [0.65, 0, 0.75, 1],
             }}
           >

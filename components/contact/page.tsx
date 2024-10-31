@@ -1,11 +1,9 @@
 import React from "react";
 
-const Contact = () => {
+export default function Contact() {
   return (
     <div id="contact" className="min-h-screen">
-      Contact Component
+      {/* Your contact content */}
     </div>
   );
-};
-
-export default Contact;
+}

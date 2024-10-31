@@ -199,20 +199,14 @@ const animationVariants = {
 const TextAnimate: FC<Props> = ({
   text,
   type = "whipInUp",
-  delay,
+  delay = 0,
+  duration = 0.75,
   ...props
 }: Props) => {
-  //   const { ref, inView } = useInView({
-  //     threshold: 0.5,
-  //     triggerOnce: true,
-  //   });
-
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const letters = Array.from(text);
   const { container, child } = animationVariants[type];
-
   const ctrls = useAnimation();
 
   useEffect(() => {
@@ -238,10 +232,8 @@ const TextAnimate: FC<Props> = ({
               animate="visible"
               variants={container}
               transition={{
-                delayChildren: index * 0.13,
-                // delayChildren: index * 0.35,
+                delayChildren: delay + index * 0.13,
                 staggerChildren: 0.025,
-                // staggerChildren: 0.05,
               }}
             >
               {word.split("").map((character, index) => {
@@ -265,12 +257,17 @@ const TextAnimate: FC<Props> = ({
 
   return (
     <motion.div
+      ref={ref}
       style={{ display: "flex", overflow: "hidden" }}
       role="heading"
       variants={container}
       initial="hidden"
-      animate="visible"
-      transition={{ delayChildren: delay }}
+      animate={ctrls}
+      transition={{
+        delayChildren: delay,
+        staggerChildren: 0.05,
+        duration: duration,
+      }}
       className="mt-10 text-4xl font-black text-black dark:text-neutral-100 py-5 pb-8 px-8 md:text-5xl"
       {...props}
     >
