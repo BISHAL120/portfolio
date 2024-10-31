@@ -8,6 +8,7 @@ import {
   IconNewSection,
   IconTerminal2,
   IconPhonePlus,
+  IconBrandLinkedin,
 } from "@tabler/icons-react";
 
 export function FloatingDockComponent() {
@@ -15,39 +16,44 @@ export function FloatingDockComponent() {
     {
       title: "Home",
       icon: <IconHome className="h-full w-full text-neutral-300" />,
-      href: "#home",
+      href: "/",
     },
 
     {
       title: "Projects",
       icon: <IconTerminal2 className="h-full w-full text-neutral-300" />,
-      href: "#",
+      href: "/projects",
     },
     {
       title: "Contact",
       icon: <IconPhonePlus className="h-full w-full text-neutral-300" />,
-      href: "#contact",
+      href: "/contact",
     },
     {
-      title: "Aceternity UI",
+      title: "Review",
       icon: <IconNewSection className="h-full w-full text-neutral-300" />,
-      href: "#",
+      href: "/review",
     },
     {
-      title: "Changelog",
+      title: "Skill",
       icon: <IconExchange className="h-full w-full text-neutral-300" />,
-      href: "#",
+      href: "/skill",
     },
 
     {
       title: "Twitter",
       icon: <IconBrandX className="h-full w-full text-neutral-300" />,
-      href: "#",
+      href: "/twitter",
     },
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-full w-full text-neutral-300" />,
-      href: "#",
+      href: "/github",
+    },
+    {
+      title: "LinkedIn",
+      icon: <IconBrandLinkedin className="h-full w-full text-neutral-300" />,
+      href: "/linkedin",
     },
   ];
   return (

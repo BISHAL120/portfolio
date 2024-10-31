@@ -1,11 +1,9 @@
-// import Contact from "@/components/contact/page";
 import Hero from "@/components/hero/page";
 
 export default function Home() {
   return (
-    <div id="home" className="">
+    <div className="bg-neutral-900 min-h-screen">
       <Hero />
-      {/* <Contact /> */}
     </div>
   );
 }
