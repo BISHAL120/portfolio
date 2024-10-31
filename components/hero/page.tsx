@@ -12,21 +12,21 @@ export default function Hero() {
         className="-top-10 left-10  md:left-60 md:-top-20"
         fill="white"
       />
-      <BackgroundLines className="flex  md:items-center md:justify-center w-full min-h-screen flex-col px-4">
-        <div className="mt-20 p-4 max-w-7xl mx-auto relative z-10 w-full pt-20 md:pt-0">
-          <div className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <BackgroundLines className="flex  md:items-center md:justify-center w-full min-h-screen flex-col md:px-4">
+        <div className="mt-20 md:p-4 md:max-w-7xl mx-auto relative z-10 pt-20 md:pt-0">
+          <div className="text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             <TextAnimate
-              className="text-white flex justify-center"
+              className="text-white flex justify-center text-3xl md:text-6xl font-bold"
               text="Monerul Islam Bishal "
               type="popIn"
             />
             <TextAnimate
-              className="text-white flex justify-center mt-4"
+              className="text-white flex justify-center mt-4 text-xl md:text-4xl font-semibold"
               text="Full Stack Developer"
               type="calmInUp"
             />
           </div>
-          <Details className="mt-10 md:mt-0" />
+          <Details className="mt-10 md:mt-0 px-4 md:px-0" />
         </div>
       </BackgroundLines>
     </div>

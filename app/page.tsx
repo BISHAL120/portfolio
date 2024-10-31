@@ -1,11 +1,11 @@
-import Contact from "@/components/contact/page";
+// import Contact from "@/components/contact/page";
 import Hero from "@/components/hero/page";
 
 export default function Home() {
   return (
-    <div className="">
+    <div id="home" className="">
       <Hero />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }
