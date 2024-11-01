@@ -70,7 +70,7 @@ export default function IconCloudDemo() {
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1 }}
         className="w-full max-w-screen"
       >
         <IconCloud iconSlugs={slugs} />

@@ -43,17 +43,20 @@ export function FloatingDockComponent() {
     {
       title: "Twitter",
       icon: <IconBrandX className="h-full w-full text-neutral-300" />,
-      href: "/twitter",
+      href: "https://x.com/monerulmd5",
+      newTab: true,
     },
     {
       title: "GitHub",
       icon: <IconBrandGithub className="h-full w-full text-neutral-300" />,
-      href: "/github",
+      href: "https://github.com/BISHAL120",
+      newTab: true,
     },
     {
       title: "LinkedIn",
       icon: <IconBrandLinkedin className="h-full w-full text-neutral-300" />,
-      href: "/linkedin",
+      href: "https://www.linkedin.com/in/monerulmd5",
+      newTab: true,
     },
   ];
   return (

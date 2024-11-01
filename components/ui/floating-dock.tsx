@@ -121,11 +121,13 @@ function IconContainer({
   title,
   icon,
   href,
+  newTab,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
+  newTab?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -174,7 +176,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link href={href}>
+    <Link target={newTab ? "_blank" : "_self"} href={href}>
       <motion.div
         ref={ref}
         style={{ width, height }}
