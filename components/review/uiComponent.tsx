@@ -34,10 +34,12 @@ const ReviewCard = ({
           src={img}
         />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium text-white">
+          <figcaption className="text-sm font-medium text-white tracking-tight">
             {name}
           </figcaption>
-          <p className="text-xs font-medium text-white">{username}</p>
+          <p className="text-xs font-medium text-white tracking-tight">
+            {username}
+          </p>
         </div>
       </div>
       <div className="mt-2 text-sm tracking-tight">{body}</div>
