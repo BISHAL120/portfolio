@@ -49,11 +49,11 @@ const slugs = [
   "visualstudiocode",
   "androidstudio",
   "figma",
+  "nextdotjs",
   //   "cssmodules",
   //   "dart",
   //   "java",
   //   "nodedotjs",
-  //   "nextdotjs",
   //   "nginx",
   //   "testinglibrary",
   //   "jest",
@@ -66,12 +66,12 @@ const slugs = [
 
 export default function IconCloudDemo() {
   return (
-    <div className="bg-neutral-900 min-h-screen flex pt-10 justify-center items-center md:items-start">
+    <div className="bg-neutral-900  min-h-screen flex pt-10 justify-center items-start">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-screen"
+        className="w-full max-w-screen space-y-10 "
       >
         <IconCloud iconSlugs={slugs} />
         <InfiniteText

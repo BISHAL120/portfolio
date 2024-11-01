@@ -1,5 +1,4 @@
 import ReviewComponent from "@/components/review/review";
-import React from "react";
 
 const Review = () => {
   return (

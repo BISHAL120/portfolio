@@ -33,7 +33,7 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative -mt-32 flex min-h-[calc(100vh+8rem)] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full z-0",
+        "relative flex min-h-[calc(100vh)] flex-col items-center justify-center overflow-hidden bg-slate-950 w-full z-0",
         className
       )}
     >
@@ -96,7 +96,15 @@ export const LampContainer = ({
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
-      <div className="absolute top-[155px] left-[30%] ">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="hidden md:flex absolute top-[20px] left-[30%] "
+      >
         {/* <p>My Client Review</p> */}
         <AnimatedGradientText>
           {/* <p>From around the world</p> */}
@@ -108,8 +116,16 @@ export const LampContainer = ({
             Client&apos;s Review
           </span>
         </AnimatedGradientText>
-      </div>
-      <div className="absolute top-[210px] left-[45%]">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="hidden md:flex absolute top-[80px] left-[45%]"
+      >
         <AnimatedGradientText>
           {/* <p>From around the world</p> */}
           <span
@@ -120,12 +136,12 @@ export const LampContainer = ({
             From Around The World
           </span>
         </AnimatedGradientText>
-      </div>
+      </motion.div>
       {/* mobile lamp */}
       <div className="md:hidden relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0 ">
         <motion.div
           initial={{ opacity: 0, width: "1rem" }}
-          whileInView={{ opacity: 1, width: "25rem" }}
+          whileInView={{ opacity: 1, width: "20rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -141,7 +157,7 @@ export const LampContainer = ({
         </motion.div>
         <motion.div
           initial={{ opacity: 0, width: "1rem" }}
-          whileInView={{ opacity: 1, width: "25rem" }}
+          whileInView={{ opacity: 1, width: "20rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -169,8 +185,8 @@ export const LampContainer = ({
           className="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
         ></motion.div>
         <motion.div
-          initial={{ width: "15rem" }}
-          whileInView={{ width: "25rem" }}
+          initial={{ width: "1rem" }}
+          whileInView={{ width: "20rem" }}
           transition={{
             delay: 0.3,
             duration: 0.8,
@@ -181,6 +197,45 @@ export const LampContainer = ({
 
         <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950 "></div>
       </div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="flex md:hidden absolute top-[5px] left-0 "
+      >
+        {/* <p>My Client Review</p> */}
+        <AnimatedGradientText>
+          <span
+            className={cn(
+              `animate-gradient inline bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent text-2xl font-medium tracking-tight`
+            )}
+          >
+            Client&apos;s Review
+          </span>
+        </AnimatedGradientText>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="flex md:hidden absolute top-[50px] right-0"
+      >
+        <AnimatedGradientText>
+          <span
+            className={cn(
+              `animate-gradient inline bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent text-2xl font-medium tracking-tight`
+            )}
+          >
+            From Around The World
+          </span>
+        </AnimatedGradientText>
+      </motion.div>
 
       <div className="relative z-50 flex -translate-y-80 flex-col items-center px-5">
         {children}

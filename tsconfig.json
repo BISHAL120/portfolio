@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/fancyCursor/cursor.js"
+    "components/fancyCursor/cursor.js",
+    "app/globe/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
