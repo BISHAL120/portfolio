@@ -1,14 +1,13 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
   IconBrandX,
   IconExchange,
   IconHome,
   IconNewSection,
   IconTerminal2,
-  IconPhonePlus,
   IconBrandLinkedin,
+  IconBrandWhatsapp,
 } from "@tabler/icons-react";
 
 export function FloatingDockComponent() {
@@ -25,31 +24,30 @@ export function FloatingDockComponent() {
       href: "/projects",
     },
     {
+      title: "Skill",
+      icon: <IconExchange className="h-full w-full text-neutral-300" />,
+      href: "/skill",
+    },
+    /* {
       title: "Contact",
       icon: <IconPhonePlus className="h-full w-full text-neutral-300" />,
       href: "/contact",
-    },
+    }, */
     {
       title: "Review",
       icon: <IconNewSection className="h-full w-full text-neutral-300" />,
       href: "/review",
     },
     {
-      title: "Skill",
-      icon: <IconExchange className="h-full w-full text-neutral-300" />,
-      href: "/skill",
+      title: "Whatsapp",
+      icon: <IconBrandWhatsapp className="h-full w-full text-neutral-300" />,
+      href: "https:wa.me/+88001312604691",
+      newTab: true,
     },
-
     {
       title: "Twitter",
       icon: <IconBrandX className="h-full w-full text-neutral-300" />,
       href: "https://x.com/monerulmd5",
-      newTab: true,
-    },
-    {
-      title: "GitHub",
-      icon: <IconBrandGithub className="h-full w-full text-neutral-300" />,
-      href: "https://github.com/BISHAL120",
       newTab: true,
     },
     {

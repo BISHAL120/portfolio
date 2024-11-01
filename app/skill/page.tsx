@@ -76,7 +76,7 @@ export default function IconCloudDemo() {
         <IconCloud iconSlugs={slugs} />
         <InfiniteText
           speed={0.05}
-          text="Next.js - React - Javascript - Typescript - TailwindCSS - Express - Prisma - MySQL - PostgreSQL - MongoDB - Clerk - Auth0 - Google Cloud - Figma - Git - Github - Android Studio - Docker - Vercel - Firebase - AWS - Google Fonts - Facebook - Sass - Firebase - Supabase - Cursor - Visual Studio Code - Android Studio - Webstorm"
+          text=" Next.js - React - Javascript - Typescript - TailwindCSS - Express - Prisma - MySQL - PostgreSQL - MongoDB - Clerk - Auth0 - Google Cloud - Figma - Git - Github - Android Studio - Docker - Vercel - Firebase - AWS - Google Fonts - Facebook - Sass - Firebase - Supabase - Cursor - Visual Studio Code - Android Studio - Webstorm - Expo -"
         />
       </motion.div>
     </div>
