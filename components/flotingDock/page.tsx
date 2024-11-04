@@ -41,7 +41,7 @@ export function FloatingDockComponent() {
     {
       title: "Whatsapp",
       icon: <IconBrandWhatsapp className="h-full w-full text-neutral-300" />,
-      href: "https:wa.me/+88001312604691",
+      href: "https://api.whatsapp.com/send/?phone=%2B8801312604691&text&type=phone_number&app_absent=0",
       newTab: true,
     },
     {
