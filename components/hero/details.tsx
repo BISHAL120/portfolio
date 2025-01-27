@@ -28,7 +28,7 @@ export default function Details({ className }: { className?: string }) {
               ease: [0.65, 0, 0.75, 1],
             }}
           >
-            {word}
+            {word + " "}
           </motion.span>
         ))}
       </motion.div>
