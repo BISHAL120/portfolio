@@ -75,7 +75,7 @@ export default function IconCloudDemo() {
       >
         <IconCloud iconSlugs={slugs} />
         <InfiniteText
-          /* Less is Slower */
+          /* Less value is Slower */
           speed={0.03}
           text=" Next.js - React - Javascript - Typescript - TailwindCSS - Express - Prisma - MySQL - PostgreSQL - MongoDB - Clerk - Auth0 - Google Cloud - Figma - Git - Github - Android Studio - Docker - Vercel - Firebase - AWS - Google Fonts - Facebook - Sass - Firebase - Supabase - Cursor - Visual Studio Code - Android Studio - Webstorm - Expo -"
         />
