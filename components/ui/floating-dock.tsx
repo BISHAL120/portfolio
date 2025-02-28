@@ -1,13 +1,7 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
-
 "use client";
 
 import { cn } from "@/lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
+import { IconLayoutNavbarCollapse, IconX } from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -50,32 +44,32 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute bottom-full  mb-2 inset-x-0 flex flex-col gap-2"
+            className="absolute top-full mb-2 inset-x-0 flex items-end pt-2 flex-col gap-2"
           >
             {items.map((item, idx) => (
               <motion.div
                 onClick={() => setOpen(false)}
                 key={item.title}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: -100 }}
                 animate={{
                   opacity: 1,
                   y: 0,
                 }}
                 exit={{
                   opacity: 0,
-                  y: 10,
+                  y: 100,
                   transition: {
                     delay: idx * 0.05,
                   },
                 }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
+                transition={{ delay: idx * 0.1 }}
               >
                 <Link
                   href={item.href}
                   key={item.title}
-                  className="h-10 w-10 rounded-full bg-neutral-900 flex items-center justify-center"
+                  className="h-12 w-12 rounded-full bg-neutral-900 flex items-center justify-center border border-neutral-600"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
+                  <div className="h-5 w-5">{item.icon}</div>
                 </Link>
               </motion.div>
             ))}
@@ -84,9 +78,13 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-neutral-800 flex items-center justify-center"
+        className="h-12 w-12 rounded-full bg-neutral-800 flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-400" />
+        {open ? (
+          <IconX className="h-7 w-7 text-neutral-400" />
+        ) : (
+          <IconLayoutNavbarCollapse className="h-7 w-7 text-neutral-400 rotate-180" />
+        )}
       </button>
     </div>
   );
@@ -101,18 +99,36 @@ const FloatingDockDesktop = ({
 }) => {
   const mouseX = useMotionValue(Infinity);
   return (
-    <motion.div
-      onMouseMove={(e) => mouseX.set(e.pageX)}
-      onMouseLeave={() => mouseX.set(Infinity)}
-      className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-neutral-900 px-4 pb-3",
-        className
-      )}
+    <div
+      className="rounded-2xl border-2"
+      style={{
+        animation: "border-color-change 3s linear infinite",
+      }}
     >
-      {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
-      ))}
-    </motion.div>
+      <div className="relative">
+        <div
+          className="w-3 h-3 rounded-full absolute shadow-[0_0_15px] shadow-current bg-current"
+          style={{
+            animation: `
+            border-follow 3s linear infinite,
+            color-change 3s linear infinite
+          `,
+          }}
+        />
+        <motion.div
+          onMouseMove={(e) => mouseX.set(e.pageX)}
+          onMouseLeave={() => mouseX.set(Infinity)}
+          className={cn(
+            "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-neutral-900 px-4 pb-3 z-10",
+            className
+          )}
+        >
+          {items.map((item) => (
+            <IconContainer mouseX={mouseX} key={item.title} {...item} />
+          ))}
+        </motion.div>
+      </div>
+    </div>
   );
 };
 

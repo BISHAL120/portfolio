@@ -66,7 +66,7 @@ const slugs = [
 
 export default function IconCloudDemo() {
   return (
-    <div className="bg-neutral-900  min-h-screen flex pt-10 justify-center items-start">
+    <div className="bg-neutral-200  min-h-screen flex justify-center items-start">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -75,7 +75,8 @@ export default function IconCloudDemo() {
       >
         <IconCloud iconSlugs={slugs} />
         <InfiniteText
-          speed={0.05}
+          /* Less is Slower */
+          speed={0.03}
           text=" Next.js - React - Javascript - Typescript - TailwindCSS - Express - Prisma - MySQL - PostgreSQL - MongoDB - Clerk - Auth0 - Google Cloud - Figma - Git - Github - Android Studio - Docker - Vercel - Firebase - AWS - Google Fonts - Facebook - Sass - Firebase - Supabase - Cursor - Visual Studio Code - Android Studio - Webstorm - Expo -"
         />
       </motion.div>

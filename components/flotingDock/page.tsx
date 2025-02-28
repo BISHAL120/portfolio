@@ -58,9 +58,9 @@ export function FloatingDockComponent() {
     },
   ];
   return (
-    <div className="fixed bottom-4 right-4 md:bottom-0 md:right-0 md:left-0 flex items-center  md:justify-center md:h-[7rem] w-full z-50">
+    <div className="fixed bottom-[calc(100%-4rem)] right-5 md:bottom-0 md:right-0 md:left-0 flex items-center  md:justify-center md:h-[7rem] w-full z-50">
       <FloatingDock
-        mobileClassName="md:translate-y-20 left-10 "
+        mobileClassName="md:translate-y-20 w-full justify-end"
         desktopClassName="w-auto"
         items={links}
       />
