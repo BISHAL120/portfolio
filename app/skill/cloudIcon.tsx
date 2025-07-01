@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { useTheme } from "next-themes";
-import { motion } from "framer-motion";
 import {
   Cloud,
   fetchSimpleIcons,
@@ -66,7 +64,6 @@ type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
 
 export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   const [data, setData] = useState<IconData | null>(null);
-  const { theme } = useTheme();
 
   useEffect(() => {
     fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
@@ -76,20 +73,13 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     if (!data) return null;
 
     return Object.values(data.simpleIcons).map((icon) =>
-      renderCustomIcon(icon, theme || "light")
+      renderCustomIcon(icon, "dark")
     );
-  }, [data, theme]);
+  }, [data]);
 
   return (
-    // @ts-expect-error aaa
     <Cloud {...cloudProps}>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        {renderedIcons}
-      </motion.div>
+      <div>{renderedIcons}</div>{" "}
     </Cloud>
   );
 }

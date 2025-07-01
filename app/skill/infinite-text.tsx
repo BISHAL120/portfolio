@@ -56,7 +56,7 @@ const InfiniteText: FC<Props> = ({ text, speed = 0.1 }) => {
           <div ref={slider} className="relative m-0 flex whitespace-nowrap">
             <p
               ref={firstText}
-              className="m-0 mr-3 text-4xl font-medium text-neutral-900 md:text-6xl lg:text-7xl"
+              className="m-0 mr-3 text-4xl font-medium text-slate-50 md:text-6xl lg:text-7xl"
             >
               {text}
             </p>

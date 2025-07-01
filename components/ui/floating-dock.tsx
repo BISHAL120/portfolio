@@ -106,15 +106,6 @@ const FloatingDockDesktop = ({
       }}
     >
       <div className="relative">
-        <div
-          className="w-3 h-3 rounded-full absolute shadow-[0_0_15px] shadow-current bg-current"
-          style={{
-            animation: `
-            border-follow 3s linear infinite,
-            color-change 3s linear infinite
-          `,
-          }}
-        />
         <motion.div
           onMouseMove={(e) => mouseX.set(e.pageX)}
           onMouseLeave={() => mouseX.set(Infinity)}
