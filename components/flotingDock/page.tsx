@@ -1,13 +1,11 @@
-import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandX,
+  IconBrandLinkedin,
+  IconBrandWhatsapp,
   IconExchange,
   IconHome,
   IconNewSection,
   IconTerminal2,
-  IconBrandLinkedin,
-  IconBrandWhatsapp,
 } from "@tabler/icons-react";
 
 export function FloatingDockComponent() {
@@ -44,12 +42,7 @@ export function FloatingDockComponent() {
       href: "https://api.whatsapp.com/send/?phone=%2B8801312604691&text&type=phone_number&app_absent=0",
       newTab: true,
     },
-    {
-      title: "Twitter",
-      icon: <IconBrandX className="h-full w-full text-neutral-300" />,
-      href: "https://x.com/monerulmd5",
-      newTab: true,
-    },
+
     {
       title: "LinkedIn",
       icon: <IconBrandLinkedin className="h-full w-full text-neutral-300" />,

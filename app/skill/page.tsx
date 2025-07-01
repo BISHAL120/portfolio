@@ -65,10 +65,6 @@ const slugs = [
 ];
 
 export default function IconCloudDemo() {
-  /*   const images = slugs.map(
-    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
-  ); */
-
   return (
     <div className="bg-black  min-h-screen flex justify-center items-start">
       <motion.div
@@ -78,9 +74,7 @@ export default function IconCloudDemo() {
         className="w-full"
       >
         <IconCloud1 iconSlugs={slugs} />
-        {/* <div className="w-[500px] h-[500px] mx-auto mb-10">
-          <IconCloud images={images} />
-        </div> */}
+
         <InfiniteText
           /* Less value is Slower */
           speed={0.03}
