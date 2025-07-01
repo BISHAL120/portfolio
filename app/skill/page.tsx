@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { IconCloud } from "./cloudIcon";
+import { IconCloud as IconCloud1 } from "./cloudIcon";
 import InfiniteText from "./infinite-text";
 
 const slugs = [
@@ -65,15 +65,22 @@ const slugs = [
 ];
 
 export default function IconCloudDemo() {
+  /*   const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  ); */
+
   return (
-    <div className="bg-neutral-200  min-h-screen flex justify-center items-start">
+    <div className="bg-black  min-h-screen flex justify-center items-start">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-screen space-y-10 "
+        className="w-full"
       >
-        <IconCloud iconSlugs={slugs} />
+        <IconCloud1 iconSlugs={slugs} />
+        {/* <div className="w-[500px] h-[500px] mx-auto mb-10">
+          <IconCloud images={images} />
+        </div> */}
         <InfiniteText
           /* Less value is Slower */
           speed={0.03}

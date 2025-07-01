@@ -3,19 +3,7 @@ import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
 import { motion } from "framer-motion";
 
-export default function ProjectParallax() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, bounce: 0.2 }}
-      className=""
-    >
-      <HeroParallax products={products} />
-    </motion.div>
-  );
-}
-export const products = [
+export const projects = [
   {
     title: "Tasker",
     link: "https://tasker.monerulislambishal.xyz",
@@ -117,3 +105,16 @@ export const products = [
     thumbnail: "/projectImage/project15.png",
   }, */
 ];
+
+export default function ProjectParallax() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1, bounce: 0.2 }}
+      className=""
+    >
+      <HeroParallax projects={projects} />
+    </motion.div>
+  );
+}

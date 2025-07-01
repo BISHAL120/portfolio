@@ -11,17 +11,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const HeroParallax = ({
-  products,
+  projects,
 }: {
-  products: {
+  projects: {
     title: string;
     link: string;
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 4);
-  const secondRow = products.slice(4, 9);
-  // const thirdRow = products.slice(15, 20);
+  const firstRow = projects.slice(0, 4);
+  const secondRow = projects.slice(4, 9);
+  // const thirdRow = projects.slice(15, 20);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -51,13 +51,13 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 300]),
+    useTransform(scrollYProgress, [0, 0.2], [-700, 80]),
     springConfig
   );
   return (
     <div
       ref={ref} /* increase the height when added the third row */
-      className="md:h-[250vh] h-[250vh] bg-neutral-900 md:py-40 py-96 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="md:h-[250vh] h-[250vh] bg-black md:py-40 py-96 max-h-[180vh] md:max-h-[200vh] overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
