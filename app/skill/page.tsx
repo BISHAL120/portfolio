@@ -4,66 +4,6 @@ import { motion } from "framer-motion";
 import { IconCloud as IconCloud1 } from "./cloudIcon";
 import InfiniteText from "./infinite-text";
 
-const slugs = [
-  "typescript",
-  "javascript",
-  "react",
-  "cursor",
-  "android",
-  "expo",
-  "html5",
-  "css3",
-  "eslint",
-  "tailwindcss",
-  "bootstrap",
-  "express",
-  "prisma",
-  "mongoose",
-  "zod",
-  "validator",
-  "amazonaws",
-  "postgresql",
-  "cssmodules",
-  "reactquery",
-  "reactrouter",
-  "reactbootstrap",
-  "createreactapp",
-  "awslambda",
-  "clerk",
-  "auth0",
-  "googlecloud",
-  "webstorm",
-  "mysql",
-  "google",
-  "googlechrome",
-  "googlefonts",
-  "facebook",
-  "sass",
-  "mongodb",
-  "firebase",
-  "supabase",
-  "vercel",
-  "docker",
-  "git",
-  "github",
-  "visualstudiocode",
-  "androidstudio",
-  "figma",
-  "nextdotjs",
-  //   "cssmodules",
-  //   "dart",
-  //   "java",
-  //   "nodedotjs",
-  //   "nginx",
-  //   "testinglibrary",
-  //   "jest",
-  //   "cypress",
-  //   "jira",
-  //   "gitlab",
-  //   "sonarqube",
-  //   "flutter",
-];
-
 export default function IconCloudDemo() {
   return (
     <div className="bg-black  min-h-screen flex justify-center items-start">
@@ -73,7 +13,7 @@ export default function IconCloudDemo() {
         transition={{ duration: 1 }}
         className="w-full"
       >
-        <IconCloud1 iconSlugs={slugs} />
+        <IconCloud1 />
 
         <InfiniteText
           /* Less value is Slower */

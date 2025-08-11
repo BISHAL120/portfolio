@@ -15,7 +15,7 @@ export const BackgroundLines = ({
   };
 }) => {
   return (
-    <div className={cn("h-[20rem] md:h-screen w-full bg-black", className)}>
+    <div className={cn("h-[20rem] w-full bg-black", className)}>
       <SVG svgOptions={svgOptions} />
       {children}
     </div>
@@ -155,6 +155,47 @@ const SVG = ({
             repeatDelay: Math.floor(Math.random() * 10 + 2),
           }}
           key={`path-third-${idx}`}
+        />
+      ))}
+      {paths.map((path, idx) => (
+        <motion.path
+          d={path}
+          stroke={colors[idx]}
+          strokeWidth="5"
+          strokeLinecap="round"
+          variants={pathVariants}
+          initial="initial"
+          animate="animate"
+          transition={{
+            duration: svgOptions?.duration || 10,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+            delay: Math.floor(Math.random() * 10),
+            repeatDelay: Math.floor(Math.random() * 10 + 2),
+          }}
+          key={`path-fourth-${idx}`}
+        />
+      ))}
+      
+      {paths.map((path, idx) => (
+        <motion.path
+          d={path}
+          stroke={colors[idx]}
+          strokeWidth="5"
+          strokeLinecap="round"
+          variants={pathVariants}
+          initial="initial"
+          animate="animate"
+          transition={{
+            duration: svgOptions?.duration || 10,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "loop",
+            delay: Math.floor(Math.random() * 10),
+            repeatDelay: Math.floor(Math.random() * 10 + 2),
+          }}
+          key={`path-fifth-${idx}`}
         />
       ))}
     </motion.svg>

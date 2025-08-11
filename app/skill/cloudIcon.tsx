@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import {
-  Cloud,
-  fetchSimpleIcons,
-  ICloud,
-  renderSimpleIcon,
-  SimpleIcon,
-} from "react-icon-cloud";
+import { Cloud, ICloud, renderSimpleIcon, SimpleIcon } from "react-icon-cloud";
 
 export const cloudProps: Omit<ICloud, "children"> = {
   containerProps: {
@@ -22,7 +16,7 @@ export const cloudProps: Omit<ICloud, "children"> = {
   options: {
     reverse: true,
     depth: 1,
-    wheelZoom: true,
+    wheelZoom: false,
     imageScale: 2,
     activeCursor: "pointer",
     tooltip: "native",
@@ -56,18 +50,21 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
   });
 };
 
-export type DynamicCloudProps = {
-  iconSlugs: string[];
+type LocalIconData = {
+  simpleIcons: {
+    [slug: string]: SimpleIcon;
+  };
 };
 
-type IconData = Awaited<ReturnType<typeof fetchSimpleIcons>>;
-
-export function IconCloud({ iconSlugs }: DynamicCloudProps) {
-  const [data, setData] = useState<IconData | null>(null);
+export function IconCloud() {
+  const [data, setData] = useState<LocalIconData | null>(null);
 
   useEffect(() => {
-    fetchSimpleIcons({ slugs: iconSlugs }).then(setData);
-  }, [iconSlugs]);
+    fetch("/skillsName.json")
+      .then((res) => res.json())
+      .then(setData)
+      .catch((err) => console.error("Failed to load icon data:", err));
+  }, []);
 
   const renderedIcons = useMemo(() => {
     if (!data) return null;
@@ -77,9 +74,5 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
     );
   }, [data]);
 
-  return (
-    <Cloud {...cloudProps}>
-      <div>{renderedIcons}</div>{" "}
-    </Cloud>
-  );
+  return <Cloud {...cloudProps}>{renderedIcons || []}</Cloud>;
 }

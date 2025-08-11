@@ -65,14 +65,14 @@ const animationVariants = {
       hidden: { scale: 0 },
       visible: {
         scale: 1,
-        transition: { staggerChildren: 0.05, delayChildren: 0.2 },
+        transition: { staggerChildren: 0.05, delayChildren: 0.75, duration: 2 },
       },
     },
     child: {
       visible: {
         opacity: 1,
         scale: 1.1,
-        transition: { type: "spring", damping: 15, stiffness: 600 },
+        transition: { type: "spring", damping: 5, stiffness: 600 },
       },
       hidden: { opacity: 0, scale: 0 },
     },
@@ -80,8 +80,8 @@ const animationVariants = {
   calmInUp: {
     container: {
       hidden: {},
-      visible: (i: number = 1) => ({
-        transition: { staggerChildren: 0.01, delayChildren: 0.2 * i },
+      visible: () => ({
+        transition: { staggerChildren: 0.01, delayChildren: 1.2 },
       }),
     },
     child: {
