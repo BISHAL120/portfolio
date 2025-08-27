@@ -4,11 +4,18 @@ import { ArrowDown } from "lucide-react";
 export const DownloadCV =() => {
   return (
     <button
+    onClick={() => {
+      const link = document.createElement('a');
+      link.href = '/assets/Bishal Resume.pdf';
+      link.download = 'Monerul_Islam_Bishal_Resume.pdf';
+      link.target = '_blank';
+      link.click();
+    }}
       className={
-        "group relative w-auto cursor-pointer overflow-hidden rounded-full border border-white/10 bg-white/10 backdrop-blur-sm p-2 px-6 text-center font-semibold"
+        "group relative max-w-[400px] cursor-pointer overflow-hidden rounded-full border border-white/10 bg-white/10 backdrop-blur-sm p-2 px-6 text-center font-semibold w-full md:w-auto ml-[40%] md:ml-0"
       }
     >
-      <div className="flex items-center justify-between gap-2">
+      <div className="flex items-center justify-center gap-2.5">
         <span className="font-mono inline-block transition-all text-white font-light duration-300 group-hover:translate-x-12 group-hover:opacity-0">
          Download CV
         </span>

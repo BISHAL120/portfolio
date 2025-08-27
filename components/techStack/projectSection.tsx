@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
-import { RefreshCcw } from "lucide-react";
 import { DraggableCard } from "./project-image-card";
 
 const ProjectSection = () => {
   return (
-    <div className="my-20 mb-96">
+    <div className="my-20 mb-10 md:mb-20">
       {/* Title section */}
       <motion.div className="text-center mb-12 md:mb-20">
         <motion.h2
@@ -32,21 +31,14 @@ const ProjectSection = () => {
       </motion.div>
 
       {/* Projects shocase section  */}
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-start">
         {/* Image Section */}
-        <div className="w-full md:w-1/2 pr-10">
-        <div className="relative">
-          <h2 className="text-2xl font-bold mb-4 text-center">
-            Swip The Images
-          </h2>
-          <span className="absolute top-0 right-0">
-            <RefreshCcw className="mr-2" />
-          </span>
-        </div>
+        <div className="w-full md:w-1/2 md:pr-10 px-2 mt-10">
+          {/* Image Cards Section */}
           <DraggableCard />
         </div>
         {/* Project Details Section */}
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 md:mt-8 px-2">
           <div>
             {/* Project ID & Title Section */}
             <motion.div className="flex items-center gap-4 mb-4 md:mb-6">
@@ -128,6 +120,18 @@ const ProjectSection = () => {
                   </span>
                 </motion.div>
               ))}
+            </div>
+            {/* Project Details section */}
+            <div className="mt-6">
+              <h3 className="text-xl font-bold text-white mb-2">
+                Project Description
+              </h3>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+              veniam repudiandae dicta asperiores ex quisquam excepturi, harum
+              quis tenetur adipisci sit mollitia voluptates veritatis facilis
+              eaque consequatur quae? Accusamus odit laudantium voluptas eius
+              magni quis! Dolorum laborum laudantium quaerat. Minima illo
+              quisquam ullam quod inventore.
             </div>
           </div>
         </div>

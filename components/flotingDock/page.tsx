@@ -5,8 +5,10 @@ import {
   IconExchange,
   IconHome,
   IconNewSection,
+  IconPhonePlus,
   IconTerminal2,
 } from "@tabler/icons-react";
+import { Mail, SunMoonIcon } from "lucide-react";
 
 export function FloatingDockComponent() {
   const links = [
@@ -26,15 +28,25 @@ export function FloatingDockComponent() {
       icon: <IconExchange className="h-full w-full text-neutral-300" />,
       href: "/skill",
     },
-    /* {
+    {
       title: "Contact",
       icon: <IconPhonePlus className="h-full w-full text-neutral-300" />,
       href: "/contact",
-    }, */
+    },
     {
       title: "Review",
       icon: <IconNewSection className="h-full w-full text-neutral-300" />,
       href: "/review",
+    },
+    {
+      title: "Email",
+      icon: <Mail className="h-full w-full text-neutral-600 dark:text-neutral-300" />,
+      href: "mailto:monerulmd5@gmail.com",
+    },
+    {
+      title: "Theme",
+      icon: <SunMoonIcon className="h-full w-full text-neutral-600 dark:text-neutral-300" />,
+      href: "#",
     },
     {
       title: "Whatsapp",

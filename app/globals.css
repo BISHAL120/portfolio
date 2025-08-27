@@ -126,5 +126,43 @@
     border-color: #3b82f6;
   }
 }
-
 /* Border Animation End */
+
+/* Wave Animation Start */
+
+/* Wave Animation Start */
+.animate-wave {
+  animation: wave 0.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+/* Wave Animation End */
+
+
+
+/* Typing Animation Start */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/* Typing Animation End */
+
+/* Typing Animation Start */
+.animate-typing {
+  animation: typing 1s steps(10) forwards;
+}
+/* Typing Animation End */

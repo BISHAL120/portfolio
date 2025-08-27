@@ -4,14 +4,14 @@ const Tittle = ({tittle, showDesc, desc}: {tittle: string, showDesc: boolean, de
   return (
     <div>
       <h2
-        className="relative text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-center z-30 pb-5 mb-0 md:mb-0 bottom-0 size-full"
+        className="relative text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-center z-30 pb-3 md:pb-5 mb-0 md:mb-0 bottom-0 size-full"
         style={{
           textShadow: "rgba(255, 255, 255, 0.05) 0px 4px 8px, rgba(255, 255, 255, 0.25) 0px 8px 30px",
           opacity: 1,
           transform: "none",
         }}
       >
-        <div className="flex flex-col items-center justify-center py-16 px-4">
+        <div className="flex flex-col items-center justify-center py-10 md:py-16 px-4">
           <div className="relative flex flex-col items-center justify-center w-full max-w-4xl mx-auto">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 blur-3xl"></div>
             <span className="text-8xl md:text-[10rem] font-extrabold bg-gradient-to-r from-white/10 via-white/5 to-white/2 bg-clip-text text-transparent select-none tracking-tighter">
@@ -21,7 +21,7 @@ const Tittle = ({tittle, showDesc, desc}: {tittle: string, showDesc: boolean, de
               {tittle}
             </h2>
           </div>
-          <div className="flex items-center gap-4 my-6">
+          <div className="flex items-center gap-4 mb-3.5 md:my-6">
             <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500/50"></div>
             <div className="h-1.5 w-1.5 rounded-full bg-purple-500/70"></div>
             <div className="h-px w-12 bg-gradient-to-l from-transparent to-purple-500/50"></div>

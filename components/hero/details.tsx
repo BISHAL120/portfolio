@@ -3,15 +3,17 @@
 import { motion } from "framer-motion";
 
 export default function Details({ className }: { className?: string }) {
-  const text =
-    "I am a full stack developer with a passion for building scalable and efficient web applications. I am a quick learner & I'm always looking for new challenges. With a strong foundation in both frontend and backend development, I am dedicated to crafting seamless user experiences and driving innovation in the tech industry.";
+  const text = `Seeking a challenging position in Full Stack Development to leverage my expertise in React, 
+JavaScript, and MongoDB. Aiming to contribute to innovative projects at the intersection of 
+scalable web applications, user-centric dashboards, and practical problem-solving in fields such as 
+SaaS platforms, eCommerce solutions, and admin panel development.`;
 
   const words = text.split(" ");
 
   return (
     <div className={className}>
       <motion.div
-        className="text-neutral-400 text-lg text-center mt-4 md:w-3/4 mx-auto"
+        className="text-neutral-400 text-lg text-start md:w-3/4 mt-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}

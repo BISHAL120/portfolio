@@ -16,7 +16,7 @@ export default function AboutSection() {
     <div ref={ref}>
       {/* Heading Section */}
       <motion.h3
-        className="text-3xl md:text-4xl font-bold mb-6 text-white"
+        className="text-3xl md:text-4xl font-bold mb-6 text-white px-2"
         initial="hidden"
         animate={isInView ? 'visible' : 'hidden'}
         variants={fadeInUp}
@@ -42,7 +42,7 @@ export default function AboutSection() {
       ].map((text, index) => (
         <motion.p
           key={index}
-          className="text-lg leading-7 mb-5 text-gray-200"
+          className="text-lg leading-7 mb-5 text-gray-200 px-2"
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={fadeInUp}

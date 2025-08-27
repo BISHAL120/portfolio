@@ -4,22 +4,6 @@ import React from "react";
 const SkillBody = () => {
   const SkillDataArray = [
     {
-      name: "JavaScript",
-      Icon: "icons/skills/javascript.svg",
-    },
-    {
-      name: "TypeScript",
-      Icon: "icons/skills/typescript.svg",
-    },
-    {
-      name: "Git",
-      Icon: "icons/skills/git.svg",
-    },
-    {
-      name: "Git Hub",
-      Icon: "icons/skills/github.svg",
-    },
-    {
       name: "HTML",
       Icon: "icons/skills/html.svg",
     },
@@ -28,12 +12,40 @@ const SkillBody = () => {
       Icon: "icons/skills/css.svg",
     },
     {
-      name: "Tailwind CSS",
-      Icon: "icons/skills/tailwind.svg",
+      name: "JavaScript",
+      Icon: "icons/skills/javascript.svg",
+    },
+    {
+      name: "TypeScript",
+      Icon: "icons/skills/typescript.svg",
+    },
+    {
+      name: "React",
+      Icon: "icons/skills/react.svg",
     },
     {
       name: "NextJS",
       Icon: "icons/skills/nextJs.svg",
+    },
+    {
+      name: "Tailwind CSS",
+      Icon: "icons/skills/tailwind.svg",
+    },
+    {
+      name: "Bootstrap",
+      Icon: "icons/skills/bootstrap.svg",
+    },
+    {
+      name: "Frammer",
+      Icon: "icons/skills/frammer.svg",
+    },
+    {
+      name: "Frammer Motion",
+      Icon: "icons/skills/FrammerMotion.svg",
+    },
+    {
+      name: "Zustand",
+      Icon: "icons/skills/zustand.svg",
     },
     {
       name: "Node.js",
@@ -44,6 +56,22 @@ const SkillBody = () => {
       Icon: "icons/skills/express.svg",
     },
     {
+      name: "Prisma",
+      Icon: "icons/skills/prisma.svg",
+    },
+    {
+      name: "Next Auth",
+      Icon: "icons/skills/nextAuth.svg",
+    },
+    {
+      name: "Firebase",
+      Icon: "icons/skills/firebase.svg",
+    },
+    {
+      name: "AWS",
+      Icon: "icons/skills/aws.svg",
+    },
+    {
       name: "MongoDB",
       Icon: "icons/skills/mongodb.svg",
     },
@@ -52,8 +80,24 @@ const SkillBody = () => {
       Icon: "icons/skills/postgresql.svg",
     },
     {
-      name: "Prisma",
-      Icon: "icons/skills/prisma.svg",
+      name: "Git",
+      Icon: "icons/skills/git.svg",
+    },
+    {
+      name: "Git Hub",
+      Icon: "icons/skills/github.svg",
+    },
+    {
+      name: "VS Code",
+      Icon: "icons/skills/vscode.svg",
+    },
+    {
+      name: "TREA.Ai",
+      Icon: "icons/skills/trea.svg",
+    },
+    {
+      name: "REST API",
+      Icon: "icons/skills/restapi.svg",
     },
     {
       name: "Docker",
@@ -64,24 +108,12 @@ const SkillBody = () => {
       name: "Postman",
       Icon: "icons/skills/postman.svg",
     },
-    {
-      name: "VS Code",
-      Icon: "icons/skills/vscode.svg",
-    },
-    {
-      name: "Redux",
-      Icon: "icons/skills/redux.svg",
-    },
-    {
-      name: "REST API",
-      Icon: "icons/skills/restapi.svg",
-    },
-    {
-      name: "GraphQL",
+   /*  {
+      name: "Jest",
       Icon: "icons/skills/react.svg",
     },
     {
-      name: "Jest",
+      name: "GraphQL",
       Icon: "icons/skills/react.svg",
     },
     {
@@ -89,9 +121,13 @@ const SkillBody = () => {
       Icon: "icons/skills/react.svg",
     },
     {
+      name: "Redux",
+      Icon: "icons/skills/redux.svg",
+    },
+    {
       name: "npm",
       Icon: "icons/skills/react.svg",
-    },
+    }, */
   ];
 
   return (

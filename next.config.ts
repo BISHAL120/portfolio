@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cdn.simpleicons.org",
+        hostname: "images.unsplash.com",
       },
     ],
   },
