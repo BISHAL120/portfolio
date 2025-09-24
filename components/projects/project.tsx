@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
 import { motion } from "framer-motion";

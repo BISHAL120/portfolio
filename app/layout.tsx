@@ -3,6 +3,7 @@ import { FloatingDockComponent } from "@/components/flotingDock/page";
 import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
+import UpdateingAlert from "@/components/ui/updationAlert";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
@@ -22,11 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${rajdhani.className} dark antialiased relative max-w-[1400px] mx-auto bg-black`}
+        className={`${rajdhani.className} dark antialiased relative bg-black`}
       >
+        <div className="max-w-[1400px] mx-auto">
         {children}
+        </div>
         <FloatingDockComponent />
         <CanvasCursor />
+        <UpdateingAlert />
       </body>
     </html>
   );

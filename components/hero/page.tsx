@@ -7,6 +7,7 @@ import LetsConnectButton from "./letsConnect";
 import DownloadCV from "./downloadCV";
 import { BlurFade } from "./gretting";
 import Details from "./details";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -52,7 +53,9 @@ const Hero = () => {
             />
           <Details className="md:mt-10 mt-5" />
             <div className="md:mt-10 mt-6 flex flex-wrap items-center justify-center md:justify-start gap-5">
-              <LetsConnectButton />
+              <Link target="_blank" href="https://www.linkedin.com/in/monerulmd5/">
+                <LetsConnectButton />
+              </Link>
               <DownloadCV />
             </div>
           </div>

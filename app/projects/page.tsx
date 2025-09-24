@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectParallax from "@/components/projects/project";
 import React from "react";
 

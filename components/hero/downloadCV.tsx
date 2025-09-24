@@ -6,7 +6,7 @@ export const DownloadCV =() => {
     <button
     onClick={() => {
       const link = document.createElement('a');
-      link.href = '/assets/Bishal Resume.pdf';
+      link.href = '/assets/Bishal Resume V2.pdf';
       link.download = 'Monerul_Islam_Bishal_Resume.pdf';
       link.target = '_blank';
       link.click();
