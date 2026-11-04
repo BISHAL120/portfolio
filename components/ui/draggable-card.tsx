@@ -49,12 +49,12 @@ export const DraggableCardBody = ({
   );
 
   const opacity = useSpring(
-    useTransform(mouseX, [-300, 0, 300], [0.8, 1, 0.8]),
+    useTransform(mouseX, [-150, 0, 150], [0.8, 1, 0.8]),
     springConfig,
   );
 
   const glareOpacity = useSpring(
-    useTransform(mouseX, [-300, 0, 300], [0.2, 0, 0.2]),
+    useTransform(mouseX, [-150, 0, 150], [0.2, 0, 0.2]),
     springConfig,
   );
 
@@ -64,8 +64,8 @@ export const DraggableCardBody = ({
       if (typeof window !== "undefined") {
         setConstraints({
           top: -window.innerHeight / 2,
-          left: -window.innerWidth / 2,
-          right: window.innerWidth / 2,
+          left: -window.innerWidth ,
+          right: window.innerWidth / .5,
           bottom: window.innerHeight / 2,
         });
       }

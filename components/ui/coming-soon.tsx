@@ -51,7 +51,7 @@ export default function ComingSoonPage() {
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-sm">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            <span className="text-sm text-white/70 font-medium">
+            <span className="text-sm text-white/80 font-medium">
               Currently in Development
             </span>
           </div>
@@ -64,7 +64,7 @@ export default function ComingSoonPage() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed text-pretty">
+          <p className="text-xl md:text-2xl text-white/72 max-w-2xl mx-auto leading-relaxed text-pretty">
             I&apos;m crafting a new digital experience that pushes the
             boundaries of design and development. Get ready for something
             extraordinary.
@@ -85,7 +85,7 @@ export default function ComingSoonPage() {
                   {item.value.toString().padStart(2, "0")}
                 </div>
               </div>
-              <div className="text-sm md:text-base text-white/50 font-medium uppercase tracking-wider">
+              <div className="text-sm md:text-base text-white/68 font-medium uppercase tracking-wider">
                 {item.label}
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function ComingSoonPage() {
 
         {/* Footer */}
         <div className="w-full mb-7 mt-5 xl:mb-0 xl:mt-0 text-center">
-          <p className="text-white/30 text-sm">
+          <p className="text-white/55 text-sm">
             © 2025 • Crafted with passion and precision
           </p>
         </div>
