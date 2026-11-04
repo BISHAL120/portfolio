@@ -1,22 +1,24 @@
-"use client";
-
-import AboutBody from "@/components/about/aboutBody";
-import Hero from "@/components/hero/page";
-import SkillSection from "@/components/skill/skillSection";
-import TittleV2 from "@/components/skill/tittleV2";
-import ProjectSection from "@/components/techStack/projectSection";
-
+import { Hero } from "@/components/hero/hero";
+import {
+  About,
+  ContactCta,
+  Principles,
+  Skills,
+  WorkPreview,
+} from "@/components/home/sections";
+import { StackMarquee } from "@/components/ui/stack-marquee";
+import { site } from "@/lib/site";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <SkillSection />
-      <TittleV2 text="ABOUT ME" />
-      <AboutBody />
-      <ProjectSection />
-      {/* <ProjectParallax />
-      <ReviewComponent /> */}
+      <StackMarquee items={site.stack} />
+      <About />
+      <Skills />
+      <WorkPreview />
+      <Principles />
+      <ContactCta />
     </>
   );
 }
