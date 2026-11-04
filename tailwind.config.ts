@@ -18,7 +18,16 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["var(--font-grotesk)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
       colors: {
+        ink: "var(--bg)",
+        paper: "var(--text)",
+        accent: "var(--accent)",
+        mint: "var(--mint)",
+        line: "var(--line)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -39,10 +48,6 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
