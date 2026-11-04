@@ -38,3 +38,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local tooling
+/artifacts/
+/.npm-cache/
+/.next-server.log
+
+# keep the env template
+!.env.example
